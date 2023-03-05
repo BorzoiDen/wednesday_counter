@@ -1,0 +1,26 @@
+.button{
+    background-color: #61dafb;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+
+.button:hover{
+    cursor: pointer;
+    background-color: #1f95bd;
+}
+
+.button:disabled{
+    opacity: 0.5;
+    border: grey 5px solid;
+    text-decoration: line-through;
+}
+
+.button:active{
+    cursor: pointer;
+    background-color: #1f95bd;
+    box-shadow: inset 5px 0 30px 10px;
+}

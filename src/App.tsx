@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Interface from "./components/Interface/Interface";
+import {Routes, Route} from "react-router-dom";
+import Settings from "./components/Settings/Settings";
+import {InterfaceContainer} from "./components/Interface/InterfaceContainer";
+import {SettingsContainer} from "./components/Settings/SettingsContainer";
+import {RootState} from "./Store/redux-store";
+import {Dispatch} from "redux";
 
 function App() {
-  return (
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Routes>
+            <Route path="/" element={ <InterfaceContainer/> } />
+            <Route path="/settings" element={ <SettingsContainer/> } />
+        </Routes>
     </div>
   );
 }

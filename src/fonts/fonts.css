@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Tech';
+    src: local('Tech'),
+    url('./Technology.ttf') format('ttf');
+}
